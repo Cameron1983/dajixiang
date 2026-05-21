@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#16241f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="理头发日历" />
+    <title>理头发日历</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=6" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">藏历理发吉日</p>
+          <h1>理头发日历</h1>
+        </div>
+        <button class="icon-button" id="todayButton" type="button" aria-label="回到今天">
+          <span aria-hidden="true">今</span>
+        </button>
+      </header>
+
+      <section class="today-panel" id="todayPanel" aria-live="polite">
+        <div class="date-line">
+          <span id="solarDate">--</span>
+          <span id="tibetanDate">--</span>
+          <span id="lunarDate">--</span>
+        </div>
+        <div class="verdict-row">
+          <p class="verdict-label" id="verdictLabel">--</p>
+          <span class="verdict-badge" id="verdictBadge">--</span>
+        </div>
+        <p class="reason" id="reasonText">--</p>
+        <div class="special-section">
+          <p>藏历殊胜日</p>
+          <div class="special-days" id="specialDays"></div>
+        </div>
+      </section>
+
+      <section class="calendar-band" aria-labelledby="monthTitle">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">月历</p>
+            <h2 id="monthTitle">--</h2>
+          </div>
+          <div class="month-actions">
+            <button class="icon-button compact" id="prevMonthButton" type="button" aria-label="上个月">‹</button>
+            <button class="icon-button compact" id="nextMonthButton" type="button" aria-label="下个月">›</button>
+          </div>
+        </div>
+        <input id="dateInput" type="date" aria-label="选择日期" />
+        <div class="week-row" aria-hidden="true">
+          <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+        </div>
+        <div class="month-grid" id="monthGrid" aria-label="月份日期"></div>
+        <div class="month-specials" id="monthSpecials" aria-label="本月殊胜日"></div>
+      </section>
+
+      <section class="actions-band">
+        <button class="secondary-button" id="exportGoodDaysButton" type="button">导入吉日</button>
+        <button class="primary-button" id="addSelectedButton" type="button">添加所选日</button>
+        <button class="secondary-button" id="copySummaryButton" type="button">复制今日结果</button>
+      </section>
+
+      <section class="guide-band" aria-labelledby="guideTitle">
+        <p class="section-kicker">理下的头发</p>
+        <div class="method-grid">
+          <article class="method-card">
+            <strong>净水中</strong>
+            <span>长寿缘起</span>
+          </article>
+          <article class="method-card">
+            <strong>火中焚烧</strong>
+            <span>事业承办</span>
+          </article>
+          <article class="method-card">
+            <strong>高山随风</strong>
+            <span>风马兴盛</span>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footnote">
+        <p>理头发缘起按用户提供的阿松上师开示整理。藏历殊胜日按常见藏传月内修持日标注；各寺院历书若有差异，以自己依止处为准。</p>
+      </footer>
+    </main>
+
+    <script src="./app.js?v=6" type="module"></script>
+  </body>
+</html>

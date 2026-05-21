@@ -1,0 +1,19 @@
+{
+  "name": "理头发日历",
+  "short_name": "理头发",
+  "description": "按藏历日期查看是否适合理头发，并导出吉日到手机日历。",
+  "id": "./",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f1e8",
+  "theme_color": "#16241f",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
