@@ -1,2 +1,3 @@
 __pycache__/
 ios-native/DerivedData/
+ios-native/MeetingRecorder/backend/.env
